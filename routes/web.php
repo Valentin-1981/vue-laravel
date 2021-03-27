@@ -30,6 +30,8 @@ Route::get('/start/random-chart', 'StartController@chartRandom');
 
 Route::get('/start/socket-chart', 'StartController@newEvent');
 
+Route::get('/start/send-message', 'StartController@sendMessage');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

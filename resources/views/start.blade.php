@@ -42,6 +42,7 @@
         <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group mr-2" role="group" aria-label="First group">
                 <a href="#7" type="button" class="btn btn-primary">ChartJS</a>
+                <a href="#8" type="button" class="btn btn-primary">Chat</a>
 {{--                <a href="#5" type="button" class="btn btn-dark">Pie</a>--}}
 {{--                <a href="#6" type="button" class="btn btn-dark">Trigger</a>--}}
             </div>
@@ -117,6 +118,16 @@
                         <div class="card-body" style="min-height: 720px">
                             <h2 class="text-center">#7 REALTIME ChartJS (Line) & VueJS *ajax+trigger+reload</h2>
                             <socket-component></socket-component>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-2" data-hash="8">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body" style="min-height: 720px">
+                            <h2 class="text-center">#8 REALTIME Chat VueJS *ajax+trigger+reload</h2>
+                            <socket-chat-component></socket-chat-component>
                         </div>
                     </div>
                 </div>
