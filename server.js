@@ -10,8 +10,8 @@ var redis = new Redis();
 redis.subscribe('news-action');
 
 redis.on('message', function(channel, message){
-    console.log("Message received" + message);
-    console.log("Channel" + channel);
+    console.log("Message received: " + message);
+    console.log("Channel: " + channel);
     message = JSON.parse(message);
     io.emit(channel + ":" + message.event, message.data);
 });
@@ -19,3 +19,5 @@ redis.on('message', function(channel, message){
 http.listen(3000, function(){
     console.log('Listening on Port: 3000');
 });
+
+// let io = require('socket.io').listen(http)

@@ -30,7 +30,7 @@
         mounted() {
             var socket = io('http://localhost:3000');
 
-            socket.on("news-action:\\App\\Events\\NewEvent", function(data){
+            socket.on("news-action:App\\Events\\NewEvent", function(data){
                 this.data = data.result;
             }.bind(this));
             this.update();
