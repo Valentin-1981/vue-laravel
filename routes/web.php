@@ -32,6 +32,8 @@ Route::get('/start/socket-chart', 'StartController@newEvent');
 
 Route::get('/start/send-message', 'StartController@sendMessage');
 
+Route::get('/start/send-private-message', 'StartController@sendPrivateMessage');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
