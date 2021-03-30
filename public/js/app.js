@@ -100282,7 +100282,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             axios({
                 method: 'get',
                 url: '/start/send-private-message',
-                params: { channels: this.userSelect, message: this.message, user: this.user.email }
+                params: { channels: this.usersSelect, message: this.message, user: this.user.email }
             }).then(function (response) {
                 _this.dataMessages.push(_this.user.email + ': ' + _this.message);
                 _this.message = "";
@@ -100335,12 +100335,12 @@ var render = function() {
               },
               _vm._l(_vm.users, function(user) {
                 return _c(
-                  "options",
-                  { attrs: { value: "news-action." + user.id } },
+                  "option",
+                  { domProps: { value: "news-action." + user.id } },
                   [_vm._v(_vm._s(user.email))]
                 )
               }),
-              1
+              0
             )
           ]),
           _vm._v(" "),
@@ -100354,17 +100354,6 @@ var render = function() {
               [_vm._v(_vm._s(_vm.dataMessages.join("\n")))]
             )
           ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c(
-            "textarea",
-            {
-              staticClass: "form-control",
-              attrs: { readonly: "", id: "", rows: "6" }
-            },
-            [_vm._v(_vm._s(_vm.dataMessages.join("\n")))]
-          )
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "input-group mb-3" }, [

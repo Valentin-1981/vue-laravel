@@ -5,16 +5,16 @@
                 <div class="row form-group">
                     <div class="col-sm-4">
                         <select multiple="" class="form-control" name="" v-model="usersSelect" id="">
-                            <options v-for="user in users" :value="'news-action.' + user.id">{{ user.email }}</options>
+                            <option v-for="user in users" :value="'news-action.' + user.id">{{ user.email }}</option>
                         </select>
                     </div>
                     <div class="col-sm-12">
                         <textarea readonly="" id="" rows="6" class="form-control">{{ dataMessages.join('\n') }}</textarea>
                     </div>
                 </div>
-                <div class="form-group">
-                    <textarea readonly="" id="" rows="6" class="form-control">{{ dataMessages.join('\n') }}</textarea>
-                </div>
+<!--                <div class="form-group">-->
+<!--                    <textarea readonly="" id="" rows="6" class="form-control">{{ dataMessages.join('\n') }}</textarea>-->
+<!--                </div>-->
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Наберите сообщение" v-model="message">
                     <div class="input-group-append">
@@ -59,7 +59,7 @@
                 axios({
                     method: 'get',
                     url: '/start/send-private-message',
-                    params: {channels: this.userSelect, message: this.message, user: this.user.email}
+                    params: {channels: this.usersSelect, message: this.message, user: this.user.email}
                 }).then((response) => {
                     this.dataMessages.push(this.user.email + ': ' + this.message);
                     this.message = "";
